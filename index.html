@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-    <h1>BMI Calculator</h1>
-
-    <p>Hight ( In cm)</p>
-    <input type="text" id="hight">
-
-    <p>Weight (In kg )</p>
-    <input type="text" id="weight">
-        <br> 
-    <button id="btn">Calculate</button>
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center"> BMI Calculator</div>
+        <div class="card-body">
+            <form action="" class="w-50 m-auto">
+                <div class="form-group">
+                    <label for="weight ">Weight:</label>
+                    <input type="number" id="Weight" class="form-control" placeholder="Weight in KG">
+                </div>
+                <div class="form-group">
+                    <label for="height ">Height:</label>
+                    <input type="number" id="Height" class="form-control" placeholder="Height in feet">
+                </div>
+                <div class="form-group">
+                    <label for="weight ">BMI Value:</label>
+                    <input type="number" id="Weight" class="form-control">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success" onclick="getbmivalue()"> Check BMI</button>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer text-center">A healthy BMI Ranges between 19 to 25 </div>
+      </div>
 </div>
-<div id="result"></div>
+
+    <script>
+        
+        function getbmivalue(){
+            var weight =document.getElementById("Weight").value;
+            var height =document.getElementById("Height").value;
+
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
